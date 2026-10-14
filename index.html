@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050807">
+  <meta name="description" content="FOUR NEIGHT ENC — JavaScript file encryption tool.">
+  <title>FOUR NEIGHT // ENC TOOL</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="FOUR NEIGHT home"><span class="brand-mark">FN</span><span>FOUR <b>NEIGHT</b><small>SECURE TOOLKIT</small></span></a>
+    <div class="status"><i></i> SYSTEM ONLINE</div>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow"><span></span> NODE.JS // AES-256-GCM</div>
+      <h1>FOUR NEIGHT<br><em>ENC TOOL</em></h1>
+      <p class="subtitle">Protect your own source code.<br><span>Encrypt. Decrypt. Stay in control.</span></p>
+      <div class="hero-line"><span></span><span></span><span></span></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <div><span class="kicker">01 / INPUT TERMINAL</span><h2>Source Console</h2></div>
+        <span class="pill">MAX 1 MB</span>
+      </div>
+      <label for="source">SOURCE CODE / ENC JSON</label>
+      <textarea id="source" spellcheck="false" placeholder="// Paste your own JavaScript here...&#10;console.log('FOUR NEIGHT');"></textarea>
+      <div class="input-meta"><span id="charCount">0 characters</span><span>NO FILES SAVED</span></div>
+      <label for="password">ENCRYPTION PASSWORD</label>
+      <div class="password-wrap"><input id="password" type="password" minlength="8" maxlength="256" autocomplete="new-password" placeholder="Minimum 8 characters"><button id="togglePassword" class="eye" type="button" aria-label="Show or hide password">SHOW</button></div>
+      <div class="actions">
+        <button id="encryptBtn" class="primary" type="button"><span>↳</span> ENCRYPT SOURCE</button>
+        <button id="decryptBtn" class="secondary" type="button">DECRYPT FILE</button>
+      </div>
+      <p class="hint"><span>!</span> Encryption protects confidentiality; it does not obfuscate code for execution. Keep your password safe—there is no password recovery.</p>
+    </section>
+
+    <section class="panel output-panel">
+      <div class="panel-head">
+        <div><span class="kicker">02 / OUTPUT BUFFER</span><h2>Result Console</h2></div>
+        <span id="resultStatus" class="pill muted">WAITING</span>
+      </div>
+      <textarea id="result" spellcheck="false" readonly placeholder="// Your result will appear here..."></textarea>
+      <div class="actions output-actions">
+        <button id="downloadBtn" class="primary" type="button" disabled>↓ DOWNLOAD RESULT</button>
+        <button id="copyBtn" class="secondary" type="button" disabled>COPY RESULT</button>
+      </div>
+      <p id="message" class="message" role="status" aria-live="polite"></p>
+    </section>
+    <footer><span>FOUR NEIGHT © <span id="year"></span></span><span>BUILT FOR YOUR OWN CODE <b>●</b></span></footer>
+  </main>
+</body>
+</html>
